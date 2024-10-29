@@ -1,8 +1,8 @@
 
-define Device/mediatek_mt7988a-prpl-mozart
-  DEVICE_VENDOR := MediaTek
-  DEVICE_MODEL := PrplOS Mozart board
-  DEVICE_DTS := mt7988a-prpl-mozart
+define Device/mediatek_mt7988a-arcadyan-mozart
+  DEVICE_VENDOR := MediaTek / Arcadyan
+  DEVICE_MODEL := Mozart
+  DEVICE_DTS := mt7988a-arcadyan-mozart
   DEVICE_DTS_DIR := ../dts
   DEVICE_DTC_FLAGS := --pad 4096
   DEVICE_DTS_LOADADDR := 0x45f00000
@@ -17,6 +17,6 @@ define Device/mediatek_mt7988a-prpl-mozart
   IMAGES := sysupgrade.bin sysupgrade.itb
   IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
   IMAGE/sysupgrade.itb := append-kernel | fit gzip $$(KDIR)/image-$$(firstword $$(DEVICE_DTS)).dtb external-with-rootfs | pad-rootfs | append-metadata
-  SUPPORTED_DEVICES += prpl,mozart
+  SUPPORTED_DEVICES += arcadyan,mozart
 endef
-TARGET_DEVICES += mediatek_mt7988a-prpl-mozart
+TARGET_DEVICES += mediatek_mt7988a-arcadyan-mozart

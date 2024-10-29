@@ -94,8 +94,8 @@ mediatek_setup_interfaces()
 	zyxel,nwa50ax-pro)
 		ucidef_set_interface_lan "eth0"
 		;;
-	prpl,mozart)
-		ucidef_set_interfaces_lan_wan "eth2 lan0" eth1
+	arcadyan,mozart)
+		ucidef_set_interfaces_lan_wan "eth1 lan0" eth2
 		;;
 	smartrg,sdg-8622|\
 	smartrg,sdg-8632|\
